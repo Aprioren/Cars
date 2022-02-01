@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cars
 {
-    abstract public class Car
+    abstract public class Car : IServiceable
     {
         public string Marks { get; set; }
         public int YearsOfProdaction { get; set; }
@@ -34,6 +34,7 @@ namespace Cars
            DistanceOnService += (int)newDistance;
 
         }
+        public abstract void Service();
         public abstract bool IsReadyToService();
 
         public override string? ToString()

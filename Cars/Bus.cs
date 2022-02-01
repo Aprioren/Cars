@@ -21,5 +21,12 @@ namespace Cars
             }
             return false;
         }
+        public override void Service()
+        {
+            if (DistanceOnService > 50_000)
+            {
+                DistanceOnService = 0;
+            }
+        }
     }
 }
